@@ -18,7 +18,7 @@ function About() {
     {
       degree: 'Bachelor of Computer Applications (BCA)',
       institution: 'Maulana Mazharul Haque Arabic and Persian University, Patna (MMHAPU)',
-      period: '2022 – 2025',
+      period: '2021 – 2025',
       status: 'Graduated',
       details: 'Core Computer Science foundation: Data Structures & Algorithms, Object-Oriented Programming with C# and Java, Web Technologies, and RDBMS.'
     },

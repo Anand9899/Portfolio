@@ -251,29 +251,15 @@ function Skills() {
       <div className="skills-matrix-grid">
         {filteredSkills.map((skill, index) => (
           <div key={index} className="skill-matrix-card">
-            {/* Card Header: Icon & Level Badge */}
+            {/* Card Header: Icon & Category Pill */}
             <div className="skill-card-top">
               <div className="skill-icon-bubble">{skill.icon}</div>
-              <div className="skill-badge-level">{skill.level}</div>
+              <span className="skill-category-pill">{skill.categoryLabel}</span>
             </div>
 
             {/* Skill Name & Summary */}
             <h3 className="skill-name">{skill.name}</h3>
             <p className="skill-description">{skill.desc}</p>
-
-            {/* Proficiency Meter */}
-            <div className="skill-progress-wrapper">
-              <div className="progress-info">
-                <span className="progress-text">{skill.categoryLabel}</span>
-                <span className="progress-pct">{skill.proficiency}%</span>
-              </div>
-              <div className="progress-bar-bg">
-                <div
-                  className="progress-bar-fill"
-                  style={{ width: `${skill.proficiency}%` }}
-                ></div>
-              </div>
-            </div>
           </div>
         ))}
       </div>

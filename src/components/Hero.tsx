@@ -87,9 +87,11 @@ function Hero() {
             {/* Direct Resume Download Link */}
             <a
               href={`${import.meta.env.BASE_URL}Anand%20Kumar%20Mishra.pdf`}
-              download="Anand_Kumar_Mishra_Resume.pdf"
+              download="Anand Kumar Mishra.pdf"
+              target="_blank"
+              rel="noreferrer"
               className="btn-secondary"
-              title="Download Anand's official Resume PDF"
+              title="Download Anand Kumar Mishra Resume PDF"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />

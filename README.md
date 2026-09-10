@@ -42,7 +42,7 @@ Hello! I'm **Anand Kumar Mishra**, a passionate and detail-oriented **Full Stack
 I specialize in architecting scalable backend APIs and responsive frontend applications using **C#, ASP.NET Core (.NET 8), ASP.NET MVC 5, Entity Framework Core, SQL Server, Node.js, Express, MongoDB, and modern React + TypeScript**.
 
 - 🔭 **Focus**: Scalable Web APIs, Clean Architecture, Database Performance & Modern UI/UX.
-- 🎓 **Education**: Master of Computer Applications (MCA) @ Mangalayatan University (2025–2027) & BCA (73.08%, 2022–2025).
+- 🎓 **Education**: Master of Computer Applications (MCA) @ Mangalayatan University (2025–2027) & BCA (73.08%, 2021–2025).
 - 💼 **Experience**: Hands-on full-stack development across .NET ecosystems, MERN stack, Java Web Technologies, and SQL database management.
 - 🎯 **Career Goal**: Contributing as a Full Stack .NET Developer in high-impact, growth-oriented engineering teams.
 
@@ -161,7 +161,7 @@ This portfolio contains an interactive live code showcase illustrating Clean Arc
 | Degree / Certificate | Institution | Timeline | Grade / Status |
 | :--- | :--- | :--- | :--- |
 | **Master of Computer Applications (MCA)** | Mangalayatan University, Aligarh | 2025 — 2027 | Pursuing (Final Year) |
-| **Bachelor of Computer Applications (BCA)** | MMHAPU, Patna | 2022 — 2025 | **73.08%** (First Class) |
+| **Bachelor of Computer Applications (BCA)** | MMHAPU, Patna | 2021 — 2025 | **73.08%** (First Class) |
 | **Intermediate (10+2 Science - PCM)** | BSEB, Bihar | 2019 — 2021 | **61.4%** |
 | **Matriculation (10th Standard)** | BSEB, Bihar | 2018 — 2019 | **62.8%** |
 

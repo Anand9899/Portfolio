@@ -179,7 +179,7 @@ function Contact({ onCopyEmail, onCopyPhone, showToast }: ContactProps) {
                 <input
                   type="text"
                   id="name"
-                  placeholder="e.g. Hiring Manager / Tech Lead"
+                  placeholder="Enter Name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
@@ -192,7 +192,7 @@ function Contact({ onCopyEmail, onCopyPhone, showToast }: ContactProps) {
                 <input
                   type="email"
                   id="email"
-                  placeholder="name@company.com"
+                  placeholder="Enter Your Email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
@@ -205,7 +205,7 @@ function Contact({ onCopyEmail, onCopyPhone, showToast }: ContactProps) {
                 <input
                   type="text"
                   id="subject"
-                  placeholder=".NET Developer Opportunity / Project Discussion"
+                  placeholder="Enter Subject"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                 />
@@ -217,7 +217,7 @@ function Contact({ onCopyEmail, onCopyPhone, showToast }: ContactProps) {
                 <textarea
                   id="message"
                   rows={4}
-                  placeholder="Hi Anand, I came across your portfolio and would like to discuss an opportunity..."
+                  placeholder="Enter A Message"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required

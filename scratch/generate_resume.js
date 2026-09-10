@@ -1,4 +1,4 @@
-import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+import { PDFDocument, PDFString, rgb, StandardFonts } from 'pdf-lib';
 import fs from 'fs';
 import path from 'path';
 
@@ -26,6 +26,46 @@ async function createResume() {
   const marginX = 45;
   const contentWidth = pageWidth - (marginX * 2);
   let y = pageHeight - 42;
+
+  // Helper to add clickable hyperlink annotations
+  function drawClickableLink(text, url, xPos, yPos, font = fontRegular, fontSize = 9, color = linkBlue) {
+    const textWidth = font.widthOfTextAtSize(text, fontSize);
+    
+    // Draw link text
+    page.drawText(text, {
+      x: xPos,
+      y: yPos,
+      font,
+      size: fontSize,
+      color
+    });
+
+    // Draw underline
+    page.drawLine({
+      start: { x: xPos, y: yPos - 1.5 },
+      end: { x: xPos + textWidth, y: yPos - 1.5 },
+      thickness: 0.6,
+      color
+    });
+
+    // Create interactive Link Annotation
+    const linkAnnot = pdfDoc.context.obj({
+      Type: 'Annot',
+      Subtype: 'Link',
+      Rect: [xPos - 1, yPos - 3, xPos + textWidth + 1, yPos + fontSize + 2],
+      Border: [0, 0, 0],
+      C: [0, 0, 0],
+      A: {
+        Type: 'Action',
+        S: 'URI',
+        URI: PDFString.of(url),
+      },
+    });
+    const linkRef = pdfDoc.context.register(linkAnnot);
+    page.node.addAnnot(linkRef);
+
+    return textWidth;
+  }
 
   // Helper to center text
   function drawCenteredText(text, yPos, font, size, color) {
@@ -65,15 +105,8 @@ async function createResume() {
   page.drawText(sep, { x: contactX, y, font: fontRegular, size: 9, color: grayText });
   contactX += fontRegular.widthOfTextAtSize(sep, 9);
 
-  page.drawText(emailText, { x: contactX, y, font: fontRegular, size: 9, color: linkBlue });
-  // Underline email
-  const emailW = fontRegular.widthOfTextAtSize(emailText, 9);
-  page.drawLine({
-    start: { x: contactX, y: y - 1.5 },
-    end: { x: contactX + emailW, y: y - 1.5 },
-    thickness: 0.6,
-    color: linkBlue
-  });
+  // Clickable Email Link
+  const emailW = drawClickableLink(emailText, `mailto:${emailText}`, contactX, y, fontRegular, 9, linkBlue);
   contactX += emailW;
 
   page.drawText(sep, { x: contactX, y, font: fontRegular, size: 9, color: grayText });
@@ -94,40 +127,25 @@ async function createResume() {
 
   let linkX = (pageWidth - linksWidth) / 2;
   
-  // Portfolio Link
-  page.drawText(pText, { x: linkX, y, font: fontRegular, size: 9, color: linkBlue });
-  page.drawLine({
-    start: { x: linkX, y: y - 1.5 },
-    end: { x: linkX + fontRegular.widthOfTextAtSize(pText, 9), y: y - 1.5 },
-    thickness: 0.6,
-    color: linkBlue
-  });
-  linkX += fontRegular.widthOfTextAtSize(pText, 9);
+  // 1. Clickable Portfolio Link
+  const portfolioUrl = 'https://anand9899.github.io/Portfolio/';
+  const pW = drawClickableLink(pText, portfolioUrl, linkX, y, fontRegular, 9, linkBlue);
+  linkX += pW;
 
   page.drawText(sep, { x: linkX, y, font: fontRegular, size: 9, color: grayText });
   linkX += fontRegular.widthOfTextAtSize(sep, 9);
 
-  // LinkedIn Link
-  page.drawText(lText, { x: linkX, y, font: fontRegular, size: 9, color: linkBlue });
-  page.drawLine({
-    start: { x: linkX, y: y - 1.5 },
-    end: { x: linkX + fontRegular.widthOfTextAtSize(lText, 9), y: y - 1.5 },
-    thickness: 0.6,
-    color: linkBlue
-  });
-  linkX += fontRegular.widthOfTextAtSize(lText, 9);
+  // 2. Clickable LinkedIn Link
+  const linkedInUrl = 'https://www.linkedin.com/in/anand-kumar-mishra-3b4a9717a/';
+  const lW = drawClickableLink(lText, linkedInUrl, linkX, y, fontRegular, 9, linkBlue);
+  linkX += lW;
 
   page.drawText(sep, { x: linkX, y, font: fontRegular, size: 9, color: grayText });
   linkX += fontRegular.widthOfTextAtSize(sep, 9);
 
-  // GitHub Link
-  page.drawText(gText, { x: linkX, y, font: fontRegular, size: 9, color: linkBlue });
-  page.drawLine({
-    start: { x: linkX, y: y - 1.5 },
-    end: { x: linkX + fontRegular.widthOfTextAtSize(gText, 9), y: y - 1.5 },
-    thickness: 0.6,
-    color: linkBlue
-  });
+  // 3. Clickable GitHub Link
+  const githubUrl = 'https://github.com/Anand9899';
+  drawClickableLink(gText, githubUrl, linkX, y, fontRegular, 9, linkBlue);
 
   y -= 18;
 
@@ -283,13 +301,17 @@ async function createResume() {
   y -= 2;
 
   // Project 2
-  page.drawText('Simon Game', {
+  const simonTitle = 'Simon Game';
+  page.drawText(simonTitle, {
     x: marginX,
     y,
     font: fontBold,
     size: 8.8,
     color: darkBlack
   });
+  const simonTitleW = fontBold.widthOfTextAtSize(simonTitle, 8.8);
+  drawClickableLink(' (GitHub)', 'https://github.com/Anand9899/Simon-Game', marginX + simonTitleW, y, fontRegular, 8.4, linkBlue);
+
   y -= 11.5;
   drawBullet('', 'Developed an interactive Simon Game using HTML, CSS, and JavaScript.', 8.4, 11.2, 16);
   drawBullet('', 'Implemented random color sequence generation and user input validation for gameplay.', 8.4, 11.2, 16);
@@ -325,7 +347,9 @@ async function createResume() {
   fs.writeFileSync(path.join(publicDir, 'Anand Kumar Mishra.pdf'), pdfBytes);
   fs.writeFileSync(path.join(publicDir, 'Anand_Kumar_Mishra_Resume.pdf'), pdfBytes);
 
-  console.log('PDF generated successfully at public/Anand Kumar Mishra.pdf & public/Anand_Kumar_Mishra_Resume.pdf');
+  console.log('PDF generated successfully with clickable links at:');
+  console.log('- public/Anand Kumar Mishra.pdf');
+  console.log('- public/Anand_Kumar_Mishra_Resume.pdf');
 }
 
 createResume().catch(console.error);
