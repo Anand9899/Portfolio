@@ -51,10 +51,9 @@ function Contact({ onCopyEmail, onCopyPhone, showToast }: ContactProps) {
           access_key: import.meta.env.VITE_WEB3FORMS_KEY || 'bf109ef7-0c67-4c92-a867-61ac4a6c4627',
           name: formData.name,
           email: formData.email,
-          subject: formData.subject || `New Portfolio Message from ${formData.name}`,
+          subject: formData.subject ? `Portfolio Contact: ${formData.subject}` : `Portfolio Contact from ${formData.name}`,
           message: formData.message,
-          from_name: `${formData.name} (Portfolio Contact)`,
-          to_email: 'anandmishra02.com@gmail.com'
+          from_name: formData.name
         })
       })
 
@@ -63,7 +62,7 @@ function Contact({ onCopyEmail, onCopyPhone, showToast }: ContactProps) {
       if (result.success) {
         setSubmitted(true)
         setFormData({ name: '', email: '', subject: '', message: '' })
-        showToast('Message sent successfully to Anand!')
+        showToast('Message sent successfully!!')
       } else {
         // If API key is not yet set or invalid, fallback gracefully
         if (result.message?.includes('Access Key') || result.message?.includes('Invalid')) {
@@ -245,7 +244,7 @@ function Contact({ onCopyEmail, onCopyPhone, showToast }: ContactProps) {
               {/* Success Banner */}
               {submitted && (
                 <div className="form-success-banner">
-                  ✓ Message sent successfully! It has been delivered directly to Anand's inbox.
+                  ✓ Message sent successfully!!
                 </div>
               )}
 
