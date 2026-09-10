@@ -23,26 +23,63 @@ function Contact({ onCopyEmail, onCopyPhone, showToast }: ContactProps) {
     message: ''
   })
   
-  // Submission success status flag
+  // Submission status flags
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
 
-  // Form submit handler - constructs a mailto URI and opens email client
-  const handleSubmit = (e: React.FormEvent) => {
+  // Form submit handler - Sends message directly to email via Web3Forms API
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!formData.name || !formData.email || !formData.message) {
       showToast('Please fill in all required fields.')
       return
     }
 
-    // URL encode the subject and message body
-    const subjectEncoded = encodeURIComponent(formData.subject || `Portfolio Inquiry from ${formData.name}`)
-    const bodyEncoded = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)
-    
-    // Launch default email application
-    window.location.href = `mailto:anandmishra02.com@gmail.com?subject=${subjectEncoded}&body=${bodyEncoded}`
-    
-    setSubmitted(true)
-    showToast('Redirecting to your email client!')
+    setIsSubmitting(true)
+    setErrorMessage('')
+
+    try {
+      // Web3Forms API Endpoint
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY || 'bf109ef7-0c67-4c92-a867-61ac4a6c4627',
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || `New Portfolio Message from ${formData.name}`,
+          message: formData.message,
+          from_name: `${formData.name} (Portfolio Contact)`,
+          to_email: 'anandmishra02.com@gmail.com'
+        })
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setSubmitted(true)
+        setFormData({ name: '', email: '', subject: '', message: '' })
+        showToast('Message sent successfully to Anand!')
+      } else {
+        // If API key is not yet set or invalid, fallback gracefully
+        if (result.message?.includes('Access Key') || result.message?.includes('Invalid')) {
+          setErrorMessage('Please configure your Web3Forms Access Key to receive emails directly.')
+        } else {
+          setErrorMessage(result.message || 'Failed to send message. Please try again.')
+        }
+        showToast('Could not send message. Please check error.')
+      }
+    } catch (err) {
+      console.error('Submission error:', err)
+      setErrorMessage('Network error occurred while sending message. Please try again.')
+      showToast('Network error while sending message.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -188,18 +225,34 @@ function Contact({ onCopyEmail, onCopyPhone, showToast }: ContactProps) {
               </div>
 
               {/* Send Button */}
-              <button type="submit" className="submit-btn">
-                <span>Send Message</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="22" y1="2" x2="11" y2="13" />
-                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
-                </svg>
+              <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <>
+                    <span>Sending...</span>
+                    <span className="btn-spinner"></span>
+                  </>
+                ) : (
+                  <>
+                    <span>Send Message</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="22" y1="2" x2="11" y2="13" />
+                      <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                    </svg>
+                  </>
+                )}
               </button>
 
               {/* Success Banner */}
               {submitted && (
                 <div className="form-success-banner">
-                  ✓ Message ready! Launching your email client to send to Anand.
+                  ✓ Message sent successfully! It has been delivered directly to Anand's inbox.
+                </div>
+              )}
+
+              {/* Error Banner */}
+              {errorMessage && (
+                <div className="form-error-banner">
+                  ⚠️ {errorMessage}
                 </div>
               )}
             </form>
