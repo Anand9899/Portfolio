@@ -3,7 +3,7 @@ import { useState } from 'react'
 // Props passed down from App component
 type ContactProps = {
   onCopyEmail: () => void     // Handler to copy email and trigger toast
-  onCopyPhone: () => void     // Handler to copy phone and trigger toast
+  onCopyPhone?: () => void    // Optional handler to copy phone
   showToast: (msg: string) => void // Handler to display custom toast
 }
 
@@ -11,10 +11,10 @@ type ContactProps = {
  * Contact Component - Contact Anand & Direct Messaging Form
  * Features:
  * - "Open for Opportunities" hiring status card
- * - Direct contact cards (Phone & WhatsApp with 1-click copy, Email with 1-click copy, Noida UP location)
- * - Interactive direct message form that opens the user's email client with prefilled data
+ * - Direct contact cards (Phone & WhatsApp with direct Call & Chat Now, Email with 1-click copy, Noida UP location)
+ * - Interactive direct message form that sends email via Web3Forms API
  */
-function Contact({ onCopyEmail, onCopyPhone, showToast }: ContactProps) {
+function Contact({ onCopyEmail, showToast }: ContactProps) {
   // Form input state management
   const [formData, setFormData] = useState({
     name: '',
@@ -86,7 +86,7 @@ function Contact({ onCopyEmail, onCopyPhone, showToast }: ContactProps) {
       {/* Section Header */}
       <div className="section-header">
         <div className="section-tag">
-          <span>06</span>
+          <span>07</span>
           <span className="tag-line"></span>
           <span>GET IN TOUCH</span>
         </div>
@@ -115,29 +115,46 @@ function Contact({ onCopyEmail, onCopyPhone, showToast }: ContactProps) {
 
           {/* Contact Details Cards */}
           <div className="contact-channels">
-            {/* Phone & WhatsApp Card with Copy Action */}
-            <div className="channel-card highlight-channel">
-              <div className="channel-icon">📞</div>
+            {/* Mobile & WhatsApp Combined Card */}
+            <div className="channel-card">
+              <div className="channel-icon">📱</div>
               <div className="channel-details">
-                <span className="channel-label">Phone &amp; WhatsApp</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span className="channel-label">Mobile & WhatsApp</span>
+                  <span className="whatsapp-live-dot" title="Available for Calls & WhatsApp"></span>
+                </div>
                 <a href="tel:+919576989908" className="channel-value">
                   +91-95769 89908
                 </a>
               </div>
-              <button
-                onClick={onCopyPhone}
-                className="channel-action-btn"
-                title="Copy phone number"
-              >
-                Copy
-              </button>
+              <div className="channel-actions">
+                <a
+                  href="tel:+919576989908"
+                  className="channel-action-btn"
+                  title="Direct Call on Phone"
+                >
+                  Call
+                </a>
+                <a
+                  href="https://wa.me/919576989908?text=Hi%20Anand,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="channel-action-btn"
+                  title="Chat directly on WhatsApp"
+                >
+                  Chat Now
+                </a>
+              </div>
             </div>
 
             {/* Email Address Card with Copy Action */}
             <div className="channel-card">
               <div className="channel-icon">📧</div>
               <div className="channel-details">
-                <span className="channel-label">Email Address</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span className="channel-label">Email ID</span>
+                  <span className="whatsapp-live-dot" title="Actively responding"></span>
+                </div>
                 <a href="mailto:anandmishra02.com@gmail.com" className="channel-value">
                   anandmishra02.com@gmail.com
                 </a>
@@ -155,10 +172,16 @@ function Contact({ onCopyEmail, onCopyPhone, showToast }: ContactProps) {
             <div className="channel-card">
               <div className="channel-icon">📍</div>
               <div className="channel-details">
-                <span className="channel-label">Current Location</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span className="channel-label">Current Location</span>
+                  <span className="whatsapp-live-dot" title="Active in Noida, UP"></span>
+                </div>
                 <span className="channel-value">Noida, UP, India</span>
               </div>
-              <span className="channel-location-tag">Active</span>
+              <span className="channel-location-tag" style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                <span className="whatsapp-live-dot" style={{ width: '6px', height: '6px' }}></span>
+                <span>Active</span>
+              </span>
             </div>
           </div>
         </div>

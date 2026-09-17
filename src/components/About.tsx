@@ -3,10 +3,10 @@
  * Features:
  * - Professional developer narrative
  * - Personal and technical strengths list
- * - Complete 4-tier education roadmap (MCA 2027, BCA 2025, 10+2 2021, 10th 2019)
+ * - Complete academic roadmap (MCA 2027, BCA 2025)
  */
 function About() {
-  // Education milestones dataset from Anand's official resume
+  // Education milestones dataset from Anand's official academic background
   const educationHistory = [
     {
       degree: 'Master of Computer Applications (MCA)',
@@ -23,18 +23,18 @@ function About() {
       details: 'Core Computer Science foundation: Data Structures & Algorithms, Object-Oriented Programming with C# and Java, Web Technologies, and RDBMS.'
     },
     {
-      degree: '10+2 (Intermediate - Science)',
+      degree: 'Intermediate (10+2)',
       institution: 'Bihar Intermediate Education Council',
-      period: '2019 – 2021',
+      period: '2021',
       status: 'Completed',
-      details: 'Higher Secondary education with focus on Mathematics, Physics, Chemistry, and Logic.'
+      details: 'Senior Secondary Education with core foundation in Science, Mathematics, and analytical problem-solving.'
     },
     {
-      degree: '10th (High School)',
+      degree: 'Matriculation (10th)',
       institution: 'Central Board of Secondary Education (CBSE)',
-      period: 'Completed 2019',
+      period: '2019',
       status: 'Completed',
-      details: 'Secondary School curriculum with strong fundamentals in Mathematics and Science.'
+      details: 'Secondary School Education with high academic standing, foundational Sciences, Mathematics, and Computer Basics.'
     }
   ]
 
@@ -111,14 +111,15 @@ function About() {
           </div>
         </div>
 
-        {/* Right Column: 4-Tier Education Roadmap */}
+        {/* Right Column: Academic Roadmap Timeline */}
         <div className="about-education-column">
+          {/* Academic Journey Header */}
           <div className="timeline-header-card">
             <div className="edu-badge">
               <span>🎓</span>
               <span>ACADEMIC ROADMAP</span>
             </div>
-            <h4 className="timeline-title">Education Journey</h4>
+            <h4 className="timeline-title">Education Milestones</h4>
           </div>
 
           <div className="education-timeline">

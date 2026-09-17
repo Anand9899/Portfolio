@@ -221,7 +221,7 @@ function Skills() {
       {/* Section Header */}
       <div className="section-header">
         <div className="section-tag">
-          <span>02</span>
+          <span>03</span>
           <span className="tag-line"></span>
           <span>TECHNICAL SKILLS</span>
         </div>

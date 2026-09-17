@@ -33,39 +33,39 @@ function Projects() {
   // Real projects list from Anand's resume and GitHub
   const projects: ProjectItem[] = [
     {
-      id: 'event-feedback-management-system',
+      id: 'recruitment-management-system',
       number: '01',
-      title: 'Event Feedback Management System',
-      subtitle: 'Full-stack event discovery & feedback platform with JWT Authentication',
-      category: 'fullstack',
-      categoryLabel: 'Node.js & MongoDB',
-      description: 'A full-stack Event Feedback Management System built with HTML, CSS, JavaScript, Node.js, Express.js, MongoDB, and JWT authentication. It allows users to explore events, submit feedback, and provide ratings.',
+      title: 'Recruitment Management System',
+      subtitle: 'Web-based job postings & applicant management platform using ASP.NET & C#',
+      category: 'dotnet',
+      categoryLabel: 'ASP.NET & C#',
+      description: 'A robust web-based application engineered with ASP.NET and C# for managing end-to-end job postings, candidate applications, authentication, and SQL Server CRUD operations.',
       resumeBullets: [
-        'Architected a full-stack Event Feedback Management System using Node.js, Express.js, and MongoDB.',
-        'Implemented secure user authentication and authorization using JSON Web Tokens (JWT) and password hashing.',
-        'Designed responsive UI using HTML5, CSS3, and modern JavaScript for event discovery and feedback submission.',
-        'Engineered RESTful API endpoints for managing events, feedback ratings, and user reviews.',
-        'Structured MongoDB database schemas with Mongoose for efficient data modeling and persistence.'
+        'Developed a web-based system using ASP.NET and C# for managing job postings and applications.',
+        'Implemented user authentication and registration functionalities.',
+        'Designed responsive UI using HTML, CSS, JavaScript, and Bootstrap.',
+        'Integrated SQL Server database with efficient CRUD operations.',
+        'Applied MVC concepts to ensure clean and maintainable code structure.'
       ],
-      techStack: ['Node.js', 'Express.js', 'MongoDB', 'JWT Auth', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'REST APIs', 'Mongoose'],
-      githubUrl: 'https://github.com/Anand9899/EventFeedbackManagementSystem',
+      techStack: ['ASP.NET Core', 'C#', 'SQL Server', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'MVC Architecture', 'CRUD'],
+      githubUrl: 'https://github.com/Anand9899',
       featured: true
     },
     {
       id: 'simon-game',
       number: '02',
       title: 'Simon Game (Interactive Web App)',
-      subtitle: 'Dynamic browser game with pattern sequence generation and audio-visual feedback',
+      subtitle: 'Dynamic browser game with pattern sequence generation and user interaction',
       category: 'frontend',
       categoryLabel: 'HTML, CSS & JS',
-      description: 'An engaging interactive Simon memory game built with vanilla web technologies, implementing sequence matching algorithms and event handling.',
+      description: 'An interactive Simon memory game built with HTML, CSS, and JavaScript, implementing random color sequence generation, DOM event handling, and level progression.',
       resumeBullets: [
         'Developed an interactive Simon Game using HTML, CSS, and JavaScript.',
         'Implemented random color sequence generation and user input validation for gameplay.',
         'Applied DOM Manipulation and Event Handling to create an interactive user experience.',
         'Designed a responsive and visually engaging interface with level progression and game-over functionality.'
       ],
-      techStack: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'DOM Manipulation', 'Event Handling'],
+      techStack: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'DOM Manipulation', 'Event Handling', 'Responsive UI'],
       githubUrl: 'https://github.com/Anand9899/Simon-Game',
       featured: true
     },
@@ -117,7 +117,7 @@ function Projects() {
       {/* Section Header */}
       <div className="section-header">
         <div className="section-tag">
-          <span>04</span>
+          <span>05</span>
           <span className="tag-line"></span>
           <span>KEY PROJECTS</span>
         </div>

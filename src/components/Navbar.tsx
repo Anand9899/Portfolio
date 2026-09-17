@@ -40,6 +40,7 @@ function Navbar({ darkMode, toggleTheme, activeSection }: NavbarProps) {
   const navLinks = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About & Education' },
+    { id: 'experience', label: 'Experience' },
     { id: 'skills', label: 'Skills' },
     { id: 'certifications', label: 'Certifications' },
     { id: 'projects', label: 'Projects' },
@@ -57,7 +58,6 @@ function Navbar({ darkMode, toggleTheme, activeSection }: NavbarProps) {
       <div className="navbar-container">
         {/* Brand Logo */}
         <a href="#home" className="navbar-logo" onClick={handleLinkClick}>
-          <span className="logo-badge">.NET</span>
           <span className="logo-name">ANAND<span>.</span></span>
         </a>
 

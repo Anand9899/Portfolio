@@ -177,7 +177,7 @@ END;`
       {/* Section Header */}
       <div className="section-header">
         <div className="section-tag">
-          <span>05</span>
+          <span>06</span>
           <span className="tag-line"></span>
           <span>CLEAN CODE ARCHITECTURE</span>
         </div>

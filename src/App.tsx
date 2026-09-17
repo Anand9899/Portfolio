@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
+import Experience from './components/Experience'
 import Skills from './components/Skills'
 import Certifications from './components/Certifications'
 import Projects from './components/Projects'
@@ -78,7 +79,7 @@ function App() {
 
   // ScrollSpy Effect: Dynamically updates the active navigation link as user scrolls
   useEffect(() => {
-    const sectionIds = ['home', 'about', 'skills', 'certifications', 'projects', 'code-showcase', 'contact']
+    const sectionIds = ['home', 'about', 'experience', 'skills', 'certifications', 'projects', 'code-showcase', 'contact']
     
     const handleScrollSpy = () => {
       const scrollPosition = window.scrollY + 180
@@ -117,24 +118,43 @@ function App() {
         {/* 1. About Anand & Education Roadmap */}
         <About />
 
-        {/* 2. Technical Skills Matrix */}
+        {/* 2. Work & Internship Experience */}
+        <Experience />
+
+        {/* 3. Technical Skills Matrix */}
         <Skills />
 
-        {/* 3. Industry Certifications */}
+        {/* 4. Industry Certifications */}
         <Certifications />
 
-        {/* 4. Featured Projects Showcase */}
+        {/* 5. Featured Projects Showcase */}
         <Projects />
 
-        {/* 5. Clean Code & Architecture Samples */}
+        {/* 6. Clean Code & Architecture Samples */}
         <CodeShowcase />
 
-        {/* 6. Contact & Direct Message Form */}
+        {/* 7. Contact & Direct Message Form */}
         <Contact onCopyEmail={handleCopyEmail} onCopyPhone={handleCopyPhone} showToast={showToast} />
       </main>
 
       {/* Global Footer */}
       <Footer />
+
+      {/* Floating WhatsApp Quick Action Button */}
+      <a
+        href="https://wa.me/919576989908?text=Hi%20Anand,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!"
+        target="_blank"
+        rel="noreferrer"
+        className="floating-whatsapp-btn"
+        aria-label="Chat on WhatsApp"
+        title="Chat with Anand on WhatsApp"
+      >
+        <span className="whatsapp-pulse"></span>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+        </svg>
+        <span className="floating-tooltip">Chat on WhatsApp</span>
+      </a>
 
       {/* Floating Global Toast Notification */}
       {toastMessage && (

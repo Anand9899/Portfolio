@@ -17,7 +17,6 @@ function Footer() {
         <div className="footer-brand-col">
           {/* Logo */}
           <div className="footer-logo">
-            <span className="logo-badge">.NET</span>
             <span className="logo-name">ANAND<span>.</span></span>
           </div>
           
@@ -61,6 +60,20 @@ function Footer() {
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                 <rect x="2" y="9" width="4" height="12" />
                 <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+
+            {/* Direct WhatsApp Chat Link */}
+            <a
+              href="https://wa.me/919576989908?text=Hi%20Anand,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Chat on WhatsApp"
+              className="social-icon-btn whatsapp-footer-btn"
+              title="Chat on WhatsApp"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
               </svg>
             </a>
 

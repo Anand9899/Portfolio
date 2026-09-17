@@ -17,6 +17,15 @@ function Certifications() {
   // Certified technical credentials from Anand's official resume
   const certs: CertificationItem[] = [
     {
+      title: 'Full Stack Development Internship Certificate',
+      issuer: 'Sysslan IT Solutions',
+      year: 'Sep 2026',
+      icon: '🏢',
+      badgeColor: '#3b82f6',
+      skillsCovered: ['Full Stack Development', 'Frontend UI', 'REST APIs', 'Backend Services', 'SQL Database', 'Authentication'],
+      description: 'Practical industry internship involving responsive UI design, backend service exposure, REST APIs integration, database management, and authentication workflows.'
+    },
+    {
       title: 'Full Stack Web Development',
       issuer: 'Apna College',
       year: '2024',
@@ -59,7 +68,7 @@ function Certifications() {
       {/* Section Header */}
       <div className="section-header">
         <div className="section-tag">
-          <span>03</span>
+          <span>04</span>
           <span className="tag-line"></span>
           <span>PROFESSIONAL CREDENTIALS</span>
         </div>
