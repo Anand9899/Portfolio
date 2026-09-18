@@ -168,28 +168,6 @@ function Contact({ onCopyEmail, showToast }: ContactProps) {
               </button>
             </div>
 
-            {/* Resume Download Channel Card */}
-            <div className="channel-card">
-              <div className="channel-icon">📄</div>
-              <div className="channel-details">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  <span className="channel-label">Official Resume</span>
-                  <span className="whatsapp-live-dot" title="Available for download"></span>
-                </div>
-                <span className="channel-value">Anand Kumar Mishra (PDF)</span>
-              </div>
-              <a
-                href={`${import.meta.env.BASE_URL}Anand%20Kumar%20Mishra.pdf`}
-                download="Anand Kumar Mishra.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="channel-action-btn download-btn"
-                title="Download Official Resume PDF"
-              >
-                Download
-              </a>
-            </div>
-
             {/* Current Location Card */}
             <div className="channel-card">
               <div className="channel-icon">📍</div>
