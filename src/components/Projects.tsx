@@ -33,22 +33,22 @@ function Projects() {
   // Real projects list from Anand's resume and GitHub
   const projects: ProjectItem[] = [
     {
-      id: 'recruitment-management-system',
+      id: 'ecommerce-web-application',
       number: '01',
-      title: 'Recruitment Management System',
-      subtitle: 'Web-based job postings & applicant management platform using ASP.NET & C#',
-      category: 'dotnet',
-      categoryLabel: 'ASP.NET & C#',
-      description: 'A robust web-based application engineered with ASP.NET and C# for managing end-to-end job postings, candidate applications, authentication, and SQL Server CRUD operations.',
+      title: 'E-Commerce Web Application',
+      subtitle: 'Full-stack online retail platform engineered with ASP.NET Core 8, C#, EF Core & SQL Server',
+      category: 'fullstack',
+      categoryLabel: 'Full Stack .NET 8',
+      description: 'A robust, full-stack e-commerce web application engineered with ASP.NET Core 8 and C#, featuring role-based authorization, product catalog management, dynamic shopping cart, wishlist, and database persistence with Entity Framework Core.',
       resumeBullets: [
-        'Developed a web-based system using ASP.NET and C# for managing job postings and applications.',
-        'Implemented user authentication and registration functionalities.',
+        'Developed a full-stack e-commerce web application using ASP.NET Core 8, C#, and Entity Framework Core.',
+        'Implemented user authentication, role-based authorization, product management, shopping cart, and wishlist functionalities.',
         'Designed responsive UI using HTML, CSS, JavaScript, and Bootstrap.',
-        'Integrated SQL Server database with efficient CRUD operations.',
-        'Applied MVC concepts to ensure clean and maintainable code structure.'
+        'Integrated SQL Server database with Entity Framework Core for efficient CRUD operations and data management.',
+        'Applied MVC and layered architecture concepts to maintain clean, scalable, and maintainable code structure.'
       ],
-      techStack: ['ASP.NET Core', 'C#', 'SQL Server', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'MVC Architecture', 'CRUD'],
-      githubUrl: 'https://github.com/Anand9899',
+      techStack: ['ASP.NET Core 8', 'C#', 'Entity Framework Core', 'SQL Server', 'Bootstrap 5', 'JavaScript', 'HTML5', 'CSS3', 'MVC Architecture', 'CRUD Operations', 'Role-Based Auth'],
+      githubUrl: 'https://github.com/Anand9899/E-Commerce',
       featured: true
     },
     {
@@ -88,8 +88,27 @@ function Projects() {
       featured: false
     },
     {
-      id: 'e-tutorial',
+      id: 'recruitment-management-system',
       number: '04',
+      title: 'Recruitment Management System',
+      subtitle: 'Web-based job postings & applicant management platform using ASP.NET & C#',
+      category: 'dotnet',
+      categoryLabel: 'ASP.NET & C#',
+      description: 'A robust web-based application engineered with ASP.NET and C# for managing end-to-end job postings, candidate applications, authentication, and SQL Server CRUD operations.',
+      resumeBullets: [
+        'Developed a web-based system using ASP.NET and C# for managing job postings and applications.',
+        'Implemented user authentication and registration functionalities.',
+        'Designed responsive UI using HTML, CSS, JavaScript, and Bootstrap.',
+        'Integrated SQL Server database with efficient CRUD operations.',
+        'Applied MVC concepts to ensure clean and maintainable code structure.'
+      ],
+      techStack: ['ASP.NET Core', 'C#', 'SQL Server', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'MVC Architecture', 'CRUD'],
+      githubUrl: 'https://github.com/Anand9899',
+      featured: false
+    },
+    {
+      id: 'e-tutorial',
+      number: '05',
       title: 'E-Tutorial Learning Management Platform',
       subtitle: 'Full-featured web portal for online learning and student course management',
       category: 'java',

@@ -122,8 +122,8 @@ function Footer() {
           <h4 className="footer-heading">Projects &amp; Code</h4>
           <ul>
             <li>
-              <a href="https://github.com/Anand9899" target="_blank" rel="noreferrer">
-                GitHub: Anand9899 ↗
+              <a href="https://github.com/Anand9899/E-Commerce" target="_blank" rel="noreferrer">
+                E-Commerce Web App (.NET 8) ↗
               </a>
             </li>
             <li>
