@@ -88,27 +88,8 @@ function Projects() {
       featured: false
     },
     {
-      id: 'recruitment-management-system',
-      number: '04',
-      title: 'Recruitment Management System',
-      subtitle: 'Web-based job postings & applicant management platform using ASP.NET & C#',
-      category: 'dotnet',
-      categoryLabel: 'ASP.NET & C#',
-      description: 'A robust web-based application engineered with ASP.NET and C# for managing end-to-end job postings, candidate applications, authentication, and SQL Server CRUD operations.',
-      resumeBullets: [
-        'Developed a web-based system using ASP.NET and C# for managing job postings and applications.',
-        'Implemented user authentication and registration functionalities.',
-        'Designed responsive UI using HTML, CSS, JavaScript, and Bootstrap.',
-        'Integrated SQL Server database with efficient CRUD operations.',
-        'Applied MVC concepts to ensure clean and maintainable code structure.'
-      ],
-      techStack: ['ASP.NET Core', 'C#', 'SQL Server', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'MVC Architecture', 'CRUD'],
-      githubUrl: 'https://github.com/Anand9899',
-      featured: false
-    },
-    {
       id: 'e-tutorial',
-      number: '05',
+      number: '04',
       title: 'E-Tutorial Learning Management Platform',
       subtitle: 'Full-featured web portal for online learning and student course management',
       category: 'java',
