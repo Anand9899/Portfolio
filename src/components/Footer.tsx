@@ -103,6 +103,17 @@ function Footer() {
             <li><a href="#projects">Key Projects</a></li>
             <li><a href="#code-showcase">Clean Architecture</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li>
+              <a
+                href={`${import.meta.env.BASE_URL}Anand%20Kumar%20Mishra.pdf`}
+                download="Anand Kumar Mishra.pdf"
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: 'var(--accent-primary)', fontWeight: 600 }}
+              >
+                Download Resume (PDF) 📥
+              </a>
+            </li>
           </ul>
         </div>
 

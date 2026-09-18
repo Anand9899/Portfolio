@@ -75,8 +75,25 @@ function Navbar({ darkMode, toggleTheme, activeSection }: NavbarProps) {
           ))}
         </nav>
 
-        {/* Action Controls: Theme Switch & Mobile Hamburger */}
+        {/* Action Controls: Theme Switch, Resume Download & Mobile Hamburger */}
         <div className="navbar-actions">
+          {/* Resume Download Action Button */}
+          <a
+            href={`${import.meta.env.BASE_URL}Anand%20Kumar%20Mishra.pdf`}
+            download="Anand Kumar Mishra.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="navbar-resume-btn"
+            title="Download Resume PDF"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            <span>Resume</span>
+          </a>
+
           {/* Theme Toggle Button (Sun/Moon icons) */}
           <button
             className="theme-btn"
@@ -129,6 +146,17 @@ function Navbar({ darkMode, toggleTheme, activeSection }: NavbarProps) {
               {link.label}
             </a>
           ))}
+          {/* Direct Resume Download in Mobile Drawer */}
+          <a
+            href={`${import.meta.env.BASE_URL}Anand%20Kumar%20Mishra.pdf`}
+            download="Anand Kumar Mishra.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="mobile-resume-btn"
+            onClick={handleLinkClick}
+          >
+            📄 Download Resume PDF
+          </a>
         </div>
       </div>
     </header>

@@ -286,6 +286,34 @@
   transform: rotate(15deg) scale(1.05);
 }
 
+.navbar-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-size: 13.5px;
+  font-weight: 700;
+  background: var(--accent-primary);
+  color: #000;
+  border: 1px solid var(--accent-primary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.navbar-resume-btn:hover {
+  background: transparent;
+  color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.25);
+}
+
+@media (max-width: 900px) {
+  .navbar-resume-btn {
+    display: none;
+  }
+}
+
 .mobile-toggle-btn {
   display: none;
   flex-direction: column;
