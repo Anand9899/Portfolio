@@ -22,7 +22,7 @@ function Footer() {
           
           {/* Bio Summary */}
           <p className="footer-bio">
-            <strong>Anand Kumar Mishra</strong> | Full Stack .NET Developer &amp; Final-Year MCA Student (Expected 2027) at Mangalayatan University, Aligarh. Based in Noida, UP.
+            <strong>Anand Kumar Mishra</strong> | Full Stack .NET Developer &amp; Final-Year MCA Student (Expected 2027) at Mangalayatan University, Aligarh. Based in Ashok Nagar, Delhi.
           </p>
 
           {/* Quick Direct Contacts */}

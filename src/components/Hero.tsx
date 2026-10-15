@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 /**
  * Hero Component - Home Landing Section
  * Features:
- * - Live pulsating availability status badge (Noida, UP)
+ * - Live pulsating availability status badge (Ashok Nagar, Delhi)
  * - Animated rotating role headlines (.NET Developer, ASP.NET Core Specialist, etc.)
  * - Professional bio summary
  * - Key Action Buttons: "View Projects" and "Download Resume"
@@ -117,7 +117,7 @@ function Hero() {
               <span className="stat-label">Industry Certifications</span>
             </div>
             <div className="stat-card">
-              <span className="stat-number">Noida, UP</span>
+              <span className="stat-number">Ashok Nagar, Delhi</span>
               <span className="stat-label">Current Location</span>
             </div>
           </div>
@@ -173,7 +173,7 @@ function Hero() {
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Role = <span className="c-str">"Full Stack .NET Developer"</span>,</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone = <span className="c-str">"+91-95769 89908"</span>,</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email = <span className="c-str">"anandmishra02.com@gmail.com"</span>,</div>
-                  <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location = <span className="c-str">"Noida, UP"</span>,</div>
+                  <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location = <span className="c-str">"Ashok Nagar, Delhi"</span>,</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Education = <span className="c-str">"MCA (Mangalayatan University, 2027)"</span>,</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skills = <span className="c-keyword">new</span>[] {'{'} <span className="c-str">"ASP.NET Core"</span>, <span className="c-str">"C#"</span>, <span className="c-str">"SQL Server"</span>, <span className="c-str">"MVC"</span> {'}'}</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;{'}'});</div>
@@ -188,7 +188,7 @@ function Hero() {
                   <div className="code-line">&nbsp;&nbsp;<span className="c-prop">"contact"</span>: {'{'}</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-prop">"phone"</span>: <span className="c-str">"+91-9576989908"</span>,</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-prop">"email"</span>: <span className="c-str">"anandmishra02.com@gmail.com"</span>,</div>
-                  <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-prop">"location"</span>: <span className="c-str">"Noida, UP, India"</span></div>
+                  <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-prop">"location"</span>: <span className="c-str">"Ashok Nagar, Delhi, India"</span></div>
                   <div className="code-line">&nbsp;&nbsp;{'}'},</div>
                   <div className="code-line">&nbsp;&nbsp;<span className="c-prop">"degrees"</span>: [</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-str">"MCA - Mangalayatan University (2027)"</span>,</div>

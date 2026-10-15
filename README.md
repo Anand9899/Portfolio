@@ -37,7 +37,7 @@
 
 ## 👨‍💻 About Me
 
-Hello! I'm **Anand Kumar Mishra**, a passionate and detail-oriented **Full Stack .NET Developer** and final-year **MCA Student (Expected 2027)** based in **Noida, UP, India**. 
+Hello! I'm **Anand Kumar Mishra**, a passionate and detail-oriented **Full Stack .NET Developer** and final-year **MCA Student (Expected 2027)** based in **Ashok Nagar, Delhi, India**. 
 
 I specialize in architecting scalable backend APIs and responsive frontend applications using **C#, ASP.NET Core (.NET 8), ASP.NET MVC 5, Entity Framework Core, SQL Server, Node.js, Express, MongoDB, and modern React + TypeScript**.
 
@@ -262,7 +262,7 @@ Portfolio/
   </a>
 
   <br /><br />
-  📍 **Location:** Noida, Uttar Pradesh, India (Open to Relocation & Remote)
+  📍 **Location:** Ashok Nagar, Delhi, India (Open to Relocation & Remote)
 </div>
 
 ---

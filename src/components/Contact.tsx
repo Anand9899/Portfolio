@@ -11,7 +11,7 @@ type ContactProps = {
  * Contact Component - Contact Anand & Direct Messaging Form
  * Features:
  * - "Open for Opportunities" hiring status card
- * - Direct contact cards (Phone & WhatsApp with direct Call & Chat Now, Email with 1-click copy, Noida UP location)
+ * - Direct contact cards (Phone & WhatsApp with direct Call & Chat Now, Email with 1-click copy, Ashok Nagar, Delhi location)
  * - Interactive direct message form that sends email via Web3Forms API
  */
 function Contact({ onCopyEmail, showToast }: ContactProps) {
@@ -174,9 +174,9 @@ function Contact({ onCopyEmail, showToast }: ContactProps) {
               <div className="channel-details">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                   <span className="channel-label">Current Location</span>
-                  <span className="whatsapp-live-dot" title="Active in Noida, UP"></span>
+                  <span className="whatsapp-live-dot" title="Active in Ashok Nagar, Delhi"></span>
                 </div>
-                <span className="channel-value">Noida, UP, India</span>
+                <span className="channel-value">Ashok Nagar, Delhi, India</span>
               </div>
               <span className="channel-location-tag" style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
                 <span className="whatsapp-live-dot" style={{ width: '6px', height: '6px' }}></span>

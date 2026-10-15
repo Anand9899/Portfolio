@@ -16,7 +16,6 @@ async function createResume() {
 
   // Exact matching color palette from original resume
   const pureBlack = rgb(0.0, 0.0, 0.0);
-  const darkBlack = rgb(0.08, 0.08, 0.08); 
   const bodyText = rgb(0.12, 0.12, 0.12);
   const grayText = rgb(0.40, 0.40, 0.40);
   const sectionBlue = rgb(0.20, 0.42, 0.70); // #336bb2
@@ -89,7 +88,7 @@ async function createResume() {
   const phoneText = '+91-95769 89908';
   const sep = ' | ';
   const emailText = 'anandmishra02.com@gmail.com';
-  const locText = 'Noida, UP';
+  const locText = 'Ashok Nagar, Delhi';
 
   const fullContactWidth = 
     fontRegular.widthOfTextAtSize(phoneText, 9.5) +

@@ -83,7 +83,7 @@ function About() {
             Passionate .NET Developer building scalable web applications with ASP.NET Core, C#, and SQL Server.
           </h3>
           <p>
-            I am <strong>Anand Kumar Mishra</strong>, based in <strong>Noida, UP</strong>. I am currently pursuing my 
+            I am <strong>Anand Kumar Mishra</strong>, based in <strong>Ashok Nagar, Delhi</strong>. I am currently pursuing my 
             <strong> Master of Computer Applications (MCA)</strong> at <strong>Mangalayatan University, Aligarh (Expected 2027)</strong>, having completed my 
             <strong> Bachelor of Computer Applications (BCA)</strong> from <strong>MMHAPU Patna</strong> in 2025.
           </p>
