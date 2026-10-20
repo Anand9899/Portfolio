@@ -1,8 +1,8 @@
-# 🚀 Anand Kumar Mishra | Full Stack .NET Developer Portfolio
+# 🚀 Anand Kumar Mishra | .NET Full Stack Developer Portfolio
 
 <div align="center">
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,30&height=220&section=header&text=Anand%20Kumar%20Mishra&fontSize=48&fontColor=ffffff&animation=fadeIn&subtext=Full%20Stack%20.NET%20Developer%20%7C%20MCA%20Graduate%20(2027)&subfontSize=18&subfontColor=F59E0B" width="100%" alt="Header Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,30&height=220&section=header&text=Anand%20Kumar%20Mishra&fontSize=48&fontColor=ffffff&animation=fadeIn&subtext=.NET%20Full%20Stack%20Developer%20%7C%20MCA%20Graduate%20(2027)&subfontSize=18&subfontColor=F59E0B" width="100%" alt="Header Banner" />
 
   <br />
 
@@ -37,14 +37,14 @@
 
 ## 👨‍💻 About Me
 
-Hello! I'm **Anand Kumar Mishra**, a passionate and detail-oriented **Full Stack .NET Developer** and final-year **MCA Student (Expected 2027)** based in **Ashok Nagar, Delhi, India**. 
+Hello! I'm **Anand Kumar Mishra**, a passionate and detail-oriented **.NET Full Stack Developer** and final-year **MCA Student (Expected 2027)** based in **Ashok Nagar, Delhi, India**. 
 
 I specialize in architecting scalable backend APIs and responsive frontend applications using **C#, ASP.NET Core (.NET 8), ASP.NET MVC 5, Entity Framework Core, SQL Server, Node.js, Express, MongoDB, and modern React + TypeScript**.
 
 - 🔭 **Focus**: Scalable Web APIs, Clean Architecture, Database Performance & Modern UI/UX.
 - 🎓 **Education**: Master of Computer Applications (MCA) @ Mangalayatan University (2025–2027) & BCA (73.08%, 2021–2025).
 - 💼 **Experience**: Hands-on full-stack development across .NET ecosystems, MERN stack, Java Web Technologies, and SQL database management.
-- 🎯 **Career Goal**: Contributing as a Full Stack .NET Developer in high-impact, growth-oriented engineering teams.
+- 🎯 **Career Goal**: Contributing as a .NET Full Stack Developer in high-impact, growth-oriented engineering teams.
 
 ---
 

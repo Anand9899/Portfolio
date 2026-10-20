@@ -13,7 +13,7 @@ function About() {
       institution: 'Mangalayatan University, Aligarh',
       period: '2025 – Expected 2027',
       status: 'Pursuing (Final Year)',
-      details: 'Specialization in Full Stack .NET Development, Enterprise Software Engineering, Distributed Architectures, and Database Systems.'
+      details: 'Specialization in .NET Full Stack Development, Enterprise Software Engineering, Distributed Architectures, and Database Systems.'
     },
     {
       degree: 'Bachelor of Computer Applications (BCA)',
@@ -71,7 +71,7 @@ function About() {
           About &amp; <span>Education</span>
         </h2>
         <p className="section-subtitle">
-          Final-year MCA student specializing in Full Stack .NET Development, passionate about building scalable, responsive, and user-friendly web applications.
+          Final-year MCA student specializing in .NET Full Stack Development, passionate about building scalable, responsive, and user-friendly web applications.
         </p>
       </div>
 

@@ -7,13 +7,13 @@ import { useState, useEffect } from 'react'
  * - Animated rotating role headlines (.NET Developer, ASP.NET Core Specialist, etc.)
  * - Professional bio summary
  * - Key Action Buttons: "View Projects" and "Download Resume"
- * - Quick metric counters (MCA '27, BCA '25, 4+ Certifications, Location)
+ * - Quick metric counters (MCA '27, BCA '25, 4+ Certifications)
  * - Interactive C# / JSON Developer Terminal Widget
  */
 function Hero() {
   // Dynamic animated rotating roles
   const roles = [
-    'Full Stack .NET Developer',
+    '.NET Full Stack Developer',
     'ASP.NET Core & Web API Developer',
     'ASP.NET MVC 5 & C# Specialist',
     'Final Year MCA Student (2027)'
@@ -51,7 +51,7 @@ function Hero() {
           {/* Subheading Greeting */}
           <div className="hero-greeting">
             <span className="greeting-line"></span>
-            <span>HELLO, WORLD! I AM</span>
+            <span>HELLO, I AM</span>
           </div>
 
           {/* Hero Name Heading */}
@@ -70,7 +70,7 @@ function Hero() {
           {/* Professional Summary Paragraph */}
           <p className="hero-bio">
             Final-year MCA student (Expected 2027) at <strong>Mangalayatan University, Aligarh</strong> specializing in 
-            <strong> Full Stack .NET Development</strong>. Skilled in <strong>ASP.NET Core, ASP.NET MVC 5, C#, Web API, SQL Server, MySQL, HTML, CSS, JavaScript, and Bootstrap</strong>. Passionate about engineering scalable, responsive, and user-friendly web applications using <strong>MVC Architecture, RESTful APIs, and CRUD operations</strong>.
+            <strong> .NET Full Stack Development</strong>. Skilled in <strong>ASP.NET Core, ASP.NET MVC 5, C#, Web API, SQL Server, MySQL, HTML, CSS, JavaScript, and Bootstrap</strong>. Passionate about engineering scalable, responsive, and user-friendly web applications using <strong>MVC Architecture, RESTful APIs, and CRUD operations</strong>.
           </p>
 
           {/* Main Action Buttons */}
@@ -115,10 +115,6 @@ function Hero() {
             <div className="stat-card">
               <span className="stat-number">4+</span>
               <span className="stat-label">Industry Certifications</span>
-            </div>
-            <div className="stat-card">
-              <span className="stat-number">Ashok Nagar, Delhi</span>
-              <span className="stat-label">Current Location</span>
             </div>
           </div>
         </div>
@@ -170,7 +166,7 @@ function Hero() {
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-keyword">return</span> <span className="c-method">Ok</span>(<span className="c-keyword">new</span> <span className="c-class">Candidate</span></div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;{'{'}</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name = <span className="c-str">"Anand Kumar Mishra"</span>,</div>
-                  <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Role = <span className="c-str">"Full Stack .NET Developer"</span>,</div>
+                  <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Role = <span className="c-str">".NET Full Stack Developer"</span>,</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone = <span className="c-str">"+91-95769 89908"</span>,</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email = <span className="c-str">"anandmishra02.com@gmail.com"</span>,</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location = <span className="c-str">"Ashok Nagar, Delhi"</span>,</div>
@@ -184,7 +180,7 @@ function Hero() {
                 <div className="code-content">
                   <div className="code-line">{'{'}</div>
                   <div className="code-line">&nbsp;&nbsp;<span className="c-prop">"name"</span>: <span className="c-str">"Anand Kumar Mishra"</span>,</div>
-                  <div className="code-line">&nbsp;&nbsp;<span className="c-prop">"designation"</span>: <span className="c-str">"Full Stack .NET Developer"</span>,</div>
+                  <div className="code-line">&nbsp;&nbsp;<span className="c-prop">"designation"</span>: <span className="c-str">".NET Full Stack Developer"</span>,</div>
                   <div className="code-line">&nbsp;&nbsp;<span className="c-prop">"contact"</span>: {'{'}</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-prop">"phone"</span>: <span className="c-str">"+91-9576989908"</span>,</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span className="c-prop">"email"</span>: <span className="c-str">"anandmishra02.com@gmail.com"</span>,</div>

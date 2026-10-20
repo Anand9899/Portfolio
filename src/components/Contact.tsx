@@ -3,7 +3,6 @@ import { useState } from 'react'
 // Props passed down from App component
 type ContactProps = {
   onCopyEmail: () => void     // Handler to copy email and trigger toast
-  onCopyPhone?: () => void    // Optional handler to copy phone
   showToast: (msg: string) => void // Handler to display custom toast
 }
 
@@ -94,7 +93,7 @@ function Contact({ onCopyEmail, showToast }: ContactProps) {
           <span>Contact</span>
         </h2>
         <p className="section-subtitle">
-          Passionate about building scalable and impactful solutions as a Full Stack .NET Developer in a collaborative, growth-oriented environment. Open to opportunities across India and remote, with a willingness to relocate for the right opportunity.
+          Passionate about building scalable and impactful solutions as a .NET Full Stack Developer in a collaborative, growth-oriented environment. Open to opportunities across India and remote, with a willingness to relocate for the right opportunity.
         </p>
       </div>
 
@@ -109,7 +108,7 @@ function Contact({ onCopyEmail, showToast }: ContactProps) {
               <span className="avail-title">Open for Opportunities</span>
             </div>
             <p className="avail-desc">
-              Final-year MCA student (Expected 2027) with hands-on experience in Full Stack .NET Development. Ready for full-time developer roles, internships, and collaborative software projects.
+              Final-year MCA student (Expected 2027) with hands-on experience in .NET Full Stack Development. Ready for full-time developer roles, internships, and collaborative software projects.
             </p>
           </div>
 
@@ -191,7 +190,7 @@ function Contact({ onCopyEmail, showToast }: ContactProps) {
           <div className="form-card">
             <h3 className="form-title">Send a Direct Message</h3>
             <p className="form-subtitle">
-              Feel free to reach out regarding job openings, freelance inquiries, or Full Stack .NET Development discussions.
+              Feel free to reach out regarding job openings, freelance inquiries, or .NET Full Stack Development discussions.
             </p>
 
             <form onSubmit={handleSubmit} className="contact-form">

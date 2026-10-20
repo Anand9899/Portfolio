@@ -63,20 +63,6 @@ function App() {
     }
   }
 
-  // Helper function to copy phone number to clipboard with feedback
-  const handleCopyPhone = () => {
-    const phone = '+919576989908'
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(phone).then(() => {
-        showToast('✓ Phone copied: +91 95769 89908')
-      }).catch(() => {
-        showToast('Phone: +91 95769 89908')
-      })
-    } else {
-      showToast('Phone: +91 95769 89908')
-    }
-  }
-
   // ScrollSpy Effect: Dynamically updates the active navigation link as user scrolls
   useEffect(() => {
     const sectionIds = ['home', 'about', 'experience', 'skills', 'certifications', 'projects', 'code-showcase', 'contact']
@@ -134,7 +120,7 @@ function App() {
         <CodeShowcase />
 
         {/* 7. Contact & Direct Message Form */}
-        <Contact onCopyEmail={handleCopyEmail} onCopyPhone={handleCopyPhone} showToast={showToast} />
+        <Contact onCopyEmail={handleCopyEmail} showToast={showToast} />
       </main>
 
       {/* Global Footer */}
