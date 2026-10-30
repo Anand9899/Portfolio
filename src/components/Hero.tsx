@@ -13,6 +13,7 @@ import { useState, useEffect } from 'react'
 function Hero() {
   // Dynamic animated rotating roles
   const roles = [
+    'Full Stack Java Developer',
     '.NET Full Stack Developer',
     'ASP.NET Core & Web API Developer',
     'ASP.NET MVC 5 & C# Specialist',
