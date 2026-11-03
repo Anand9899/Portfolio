@@ -23,7 +23,10 @@ function Navbar({ darkMode, toggleTheme, activeSection }: NavbarProps) {
   // State to apply blur & shadow when page is scrolled down
   const [scrolled, setScrolled] = useState(false)
 
-  // Detect window scroll position to toggle header background styling
+  // State for page scroll progress percentage (0 - 100)
+  const [scrollProgress, setScrollProgress] = useState(0)
+
+  // Detect window scroll position to toggle header background styling and track reading progress
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 30) {
@@ -31,8 +34,15 @@ function Navbar({ darkMode, toggleTheme, activeSection }: NavbarProps) {
       } else {
         setScrolled(false)
       }
+
+      // Calculate total scrollable height and percentage
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight
+      if (totalHeight > 0) {
+        const currentProgress = (window.scrollY / totalHeight) * 100
+        setScrollProgress(Math.min(100, Math.max(0, currentProgress)))
+      }
     }
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -55,6 +65,14 @@ function Navbar({ darkMode, toggleTheme, activeSection }: NavbarProps) {
 
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      {/* Top Scroll Progress Bar */}
+      <div className="navbar-progress-track" aria-hidden="true">
+        <div
+          className="navbar-progress-bar"
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
+
       <div className="navbar-container">
         {/* Brand Logo */}
         <a href="#home" className="navbar-logo" onClick={handleLinkClick}>

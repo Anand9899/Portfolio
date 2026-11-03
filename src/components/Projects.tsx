@@ -25,14 +25,13 @@ export type ProjectItem = {
  */
 function Projects() {
   const [filter, setFilter] = useState<ProjectCategory>('all')
-  const [searchQuery, setSearchQuery] = useState<string>('')
 
   // Complete list of projects from Anand's GitHub profile (github.com/Anand9899)
   const projects: ProjectItem[] = [
     {
       id: 'application-form-management-system',
       number: '01',
-      title: 'Application-Form-Management-System',
+      title: 'Application Form Management System',
       subtitle: 'Clean Architecture employment recruitment platform built with React 19, ASP.NET Core 10 & SQL Server',
       category: 'dotnet',
       categories: ['fullstack', 'dotnet'],
@@ -51,7 +50,7 @@ function Projects() {
     {
       id: 'ecommerce-web-application',
       number: '02',
-      title: 'E-Commerce',
+      title: 'E-Commerce Web Application',
       subtitle: 'Full-stack retail web application engineered with ASP.NET Core 8, C#, EF Core & SQL Server',
       category: 'fullstack',
       categories: ['fullstack', 'dotnet'],
@@ -71,7 +70,7 @@ function Projects() {
     {
       id: 'hireflow',
       number: '03',
-      title: 'HireFlow',
+      title: 'HireFlow Applicant Portal',
       subtitle: 'Full-stack applicant portal engineered with ASP.NET Core Web API, EF Core & SQLite',
       category: 'dotnet',
       categories: ['fullstack', 'dotnet'],
@@ -90,7 +89,7 @@ function Projects() {
     {
       id: 'event-feedback-management-system',
       number: '04',
-      title: 'EventFeedbackManagementSystem',
+      title: 'Event Feedback Management System',
       subtitle: 'Full-stack attendee evaluation platform engineered with Node.js, Express, MongoDB & JWT',
       category: 'nodejs',
       categories: ['fullstack', 'nodejs'],
@@ -109,7 +108,7 @@ function Projects() {
     {
       id: 'crn-product-api',
       number: '05',
-      title: 'CRN.ProductAPI',
+      title: 'CRN Product API',
       subtitle: 'RESTful API engineered with ASP.NET Core, EF Core, SQL Server, Docker & Swagger',
       category: 'dotnet',
       categories: ['dotnet'],
@@ -128,7 +127,7 @@ function Projects() {
     {
       id: 'e-tutorial',
       number: '06',
-      title: 'E-Tutorial-',
+      title: 'E-Tutorial Learning Portal',
       subtitle: 'Web-based learning portal built with Java Servlets, JSP, JDBC, and MySQL',
       category: 'java',
       categories: ['fullstack', 'java'],
@@ -147,7 +146,7 @@ function Projects() {
     {
       id: 'ai-assistance',
       number: '07',
-      title: 'AI-Assistance',
+      title: 'AI Voice Assistant',
       subtitle: 'Hands-free browser AI assistant with real-time speech recognition & voice synthesis',
       category: 'ai',
       categories: ['ai'],
@@ -166,7 +165,7 @@ function Projects() {
     {
       id: 'portfolio-showcase',
       number: '08',
-      title: 'Portfolio',
+      title: 'Developer Portfolio Showcase',
       subtitle: 'Modern personal portfolio website with dark/light themes, animations & interactive UI',
       category: 'frontend',
       categories: ['frontend'],
@@ -186,7 +185,7 @@ function Projects() {
     {
       id: 'birthday-celebration-gala',
       number: '09',
-      title: 'birthday-celebration-gala',
+      title: 'Birthday Celebration Gala',
       subtitle: 'Rich celebration portal with dynamic cake, audio jukebox, theme switcher & fireworks',
       category: 'frontend',
       categories: ['frontend'],
@@ -205,7 +204,7 @@ function Projects() {
     {
       id: 'simon-game',
       number: '10',
-      title: 'Simon-Game',
+      title: 'Simon Memory Game',
       subtitle: 'Dynamic browser memory game with pattern sequence generation and audio cues',
       category: 'frontend',
       categories: ['frontend'],
@@ -224,7 +223,7 @@ function Projects() {
     {
       id: 'digital-clock',
       number: '11',
-      title: 'Digital-Clock',
+      title: 'Neon Digital Clock',
       subtitle: 'Sleek neon glowing clock with live 24h/12h time tracking and date synchronization',
       category: 'frontend',
       categories: ['frontend'],
@@ -242,7 +241,7 @@ function Projects() {
     {
       id: 'kids-app',
       number: '12',
-      title: 'Kids-App',
+      title: 'Kids Interactive Learning App',
       subtitle: 'Educational interactive web application designed for children to learn alphabets & numbers',
       category: 'frontend',
       categories: ['frontend'],
@@ -259,26 +258,12 @@ function Projects() {
     }
   ]
 
-  // Filter projects according to category tab and search query
+  // Filter projects according to category tab
   const filteredProjects = useMemo(() => {
     return projects.filter((project) => {
-      // Category match: checks if current filter is 'all' or in project's categories array
-      const matchesCategory = filter === 'all' || project.categories.includes(filter)
-
-      // Search query match across title, subtitle, description, tech stack, and category
-      const q = searchQuery.toLowerCase().trim()
-      if (!q) return matchesCategory
-
-      const matchesSearch =
-        project.title.toLowerCase().includes(q) ||
-        project.subtitle.toLowerCase().includes(q) ||
-        project.description.toLowerCase().includes(q) ||
-        project.categoryLabel.toLowerCase().includes(q) ||
-        project.techStack.some((t) => t.toLowerCase().includes(q))
-
-      return matchesCategory && matchesSearch
+      return filter === 'all' || project.categories.includes(filter)
     })
-  }, [projects, filter, searchQuery])
+  }, [projects, filter])
 
   // Count helper based on categories list
   const getCount = (cat: ProjectCategory) => {
@@ -293,76 +278,18 @@ function Projects() {
         <div className="section-tag">
           <span>05</span>
           <span className="tag-line"></span>
-          <span>KEY PROJECTS &amp; GITHUB REPOSITORIES</span>
+          <span>FEATURED WORK</span>
         </div>
         <h2 className="section-title">
-          GitHub &amp; <span>Engineering Projects</span>
+          <span>Projects</span>
         </h2>
         <p className="section-subtitle">
-          Explore complete production codebases, enterprise architectures, APIs, and interactive web applications from my GitHub profile.
+          A showcase of full-stack web applications, robust backend APIs, and enterprise solutions built with .NET Core, Java, and modern web technologies.
         </p>
       </div>
 
-      {/* GitHub Profile Stat Banner */}
-      <div className="github-stats-banner">
-        <div className="github-banner-left">
-          <div className="github-avatar-badge">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-            </svg>
-          </div>
-          <div className="github-banner-info">
-            <div className="github-profile-name">
-              <span className="profile-handle">github.com/Anand9899</span>
-              <span className="live-repo-count">{projects.length} Repositories Documented</span>
-            </div>
-            <p className="github-profile-desc">
-              All projects are open-source and include Clean Architecture, REST APIs, unit tests, and relational databases.
-            </p>
-          </div>
-        </div>
-        <a
-          href="https://github.com/Anand9899"
-          target="_blank"
-          rel="noreferrer"
-          className="github-profile-link-btn"
-          title="Open Anand Mishra's GitHub Profile"
-        >
-          <span>Visit GitHub Profile</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="7" y1="17" x2="17" y2="7"></line>
-            <polyline points="7 7 17 7 17 17"></polyline>
-          </svg>
-        </a>
-      </div>
-
-      {/* Toolbar: Search & Filter Tabs */}
+      {/* Filter Category Tabs */}
       <div className="projects-toolbar">
-        {/* Search input */}
-        <div className="projects-search-wrapper">
-          <svg className="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-          <input
-            type="text"
-            className="projects-search-input"
-            placeholder="Search projects by name, language, or tech (e.g. React, .NET, MongoDB, Java)..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          {searchQuery && (
-            <button
-              className="search-clear-btn"
-              onClick={() => setSearchQuery('')}
-              title="Clear search"
-            >
-              ×
-            </button>
-          )}
-        </div>
-
-        {/* Filter Category Tabs */}
         <div className="projects-filter-tabs">
           <button
             className={`filter-tab-btn ${filter === 'all' ? 'active' : ''}`}
@@ -490,15 +417,12 @@ function Projects() {
         </div>
       ) : (
         <div className="projects-empty-state">
-          <div className="empty-icon">🔍</div>
+          <div className="empty-icon">📁</div>
           <h3>No projects found</h3>
-          <p>No project matches your search query &ldquo;{searchQuery}&rdquo;.</p>
+          <p>No project found in this category.</p>
           <button
             className="reset-filter-btn"
-            onClick={() => {
-              setSearchQuery('')
-              setFilter('all')
-            }}
+            onClick={() => setFilter('all')}
           >
             Reset Filters
           </button>
