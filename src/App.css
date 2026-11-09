@@ -1742,8 +1742,8 @@
 }
 
 .project-showcase-card.featured-card {
-  border-color: rgba(245, 158, 11, 0.3);
-  background: linear-gradient(180deg, rgba(245, 158, 11, 0.04) 0%, var(--card-bg) 100%);
+  border-color: var(--card-border);
+  background: var(--card-bg);
 }
 
 .project-card-header {
