@@ -29,27 +29,8 @@ function Projects() {
   // Complete list of projects from Anand's GitHub profile (github.com/Anand9899)
   const projects: ProjectItem[] = [
     {
-      id: 'application-form-management-system',
-      number: '01',
-      title: 'Application Form Management System',
-      subtitle: 'Clean Architecture employment recruitment platform built with React 19, ASP.NET Core 10 & SQL Server',
-      category: 'dotnet',
-      categories: ['fullstack', 'dotnet'],
-      categoryLabel: 'Full Stack .NET & React 19',
-      description: 'An enterprise-grade employment application and recruitment tracking system engineered with Clean Architecture principles, React 19 frontend, ASP.NET Core backend, Entity Framework Core, and SQL Server for end-to-end applicant tracking.',
-      resumeBullets: [
-        'Architected using Clean Architecture separating Domain, Application, Infrastructure, and API layers.',
-        'Engineered responsive React 19 UI with multi-step candidate application workflows and real-time validation.',
-        'Implemented ASP.NET Core REST APIs with Entity Framework Core code-first database migrations.',
-        'Integrated relational SQL Server schemas with indexed queries and recruiter review dashboards.'
-      ],
-      techStack: ['React 19', 'ASP.NET Core', 'C#', 'Clean Architecture', 'Entity Framework Core', 'SQL Server', 'REST API', 'TypeScript'],
-      githubUrl: 'https://github.com/Anand9899/Application-Form-Management-System',
-      featured: true
-    },
-    {
       id: 'ecommerce-web-application',
-      number: '02',
+      number: '01',
       title: 'E-Commerce Web Application',
       subtitle: 'Full-stack retail web application engineered with ASP.NET Core 8, C#, EF Core & SQL Server',
       category: 'fullstack',
@@ -69,7 +50,7 @@ function Projects() {
     },
     {
       id: 'hireflow',
-      number: '03',
+      number: '02',
       title: 'HireFlow Applicant Portal',
       subtitle: 'Full-stack applicant portal engineered with ASP.NET Core Web API, EF Core & SQLite',
       category: 'dotnet',
@@ -88,7 +69,7 @@ function Projects() {
     },
     {
       id: 'event-feedback-management-system',
-      number: '04',
+      number: '03',
       title: 'Event Feedback Management System',
       subtitle: 'Full-stack attendee evaluation platform engineered with Node.js, Express, MongoDB & JWT',
       category: 'nodejs',
@@ -107,7 +88,7 @@ function Projects() {
     },
     {
       id: 'crn-product-api',
-      number: '05',
+      number: '04',
       title: 'CRN Product API',
       subtitle: 'RESTful API engineered with ASP.NET Core, EF Core, SQL Server, Docker & Swagger',
       category: 'dotnet',
@@ -126,7 +107,7 @@ function Projects() {
     },
     {
       id: 'e-tutorial',
-      number: '06',
+      number: '05',
       title: 'E-Tutorial Learning Portal',
       subtitle: 'Web-based learning portal built with Java Servlets, JSP, JDBC, and MySQL',
       category: 'java',
@@ -145,7 +126,7 @@ function Projects() {
     },
     {
       id: 'ai-assistance',
-      number: '07',
+      number: '06',
       title: 'AI Voice Assistant',
       subtitle: 'Hands-free browser AI assistant with real-time speech recognition & voice synthesis',
       category: 'ai',
@@ -164,7 +145,7 @@ function Projects() {
     },
     {
       id: 'portfolio-showcase',
-      number: '08',
+      number: '07',
       title: 'Developer Portfolio Showcase',
       subtitle: 'Modern personal portfolio website with dark/light themes, animations & interactive UI',
       category: 'frontend',
@@ -184,7 +165,7 @@ function Projects() {
     },
     {
       id: 'birthday-celebration-gala',
-      number: '09',
+      number: '08',
       title: 'Birthday Celebration Gala',
       subtitle: 'Rich celebration portal with dynamic cake, audio jukebox, theme switcher & fireworks',
       category: 'frontend',
@@ -203,7 +184,7 @@ function Projects() {
     },
     {
       id: 'simon-game',
-      number: '10',
+      number: '09',
       title: 'Simon Memory Game',
       subtitle: 'Dynamic browser memory game with pattern sequence generation and audio cues',
       category: 'frontend',
@@ -222,7 +203,7 @@ function Projects() {
     },
     {
       id: 'digital-clock',
-      number: '11',
+      number: '10',
       title: 'Neon Digital Clock',
       subtitle: 'Sleek neon glowing clock with live 24h/12h time tracking and date synchronization',
       category: 'frontend',
@@ -240,7 +221,7 @@ function Projects() {
     },
     {
       id: 'kids-app',
-      number: '12',
+      number: '11',
       title: 'Kids Interactive Learning App',
       subtitle: 'Educational interactive web application designed for children to learn alphabets & numbers',
       category: 'frontend',
