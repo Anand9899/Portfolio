@@ -171,8 +171,7 @@ function Hero() {
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone = <span className="c-str">"+91-95769 89908"</span>,</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email = <span className="c-str">"anandmishra02.com@gmail.com"</span>,</div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location = <span className="c-str">"Ashok Nagar, Delhi"</span>,</div>
-                  <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Education = <span className="c-str">"MCA (Mangalayatan University, 2027)"</span>,</div>
-                  <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skills = <span className="c-keyword">new</span>[] {'{'} <span className="c-str">"ASP.NET Core"</span>, <span className="c-str">"C#"</span>, <span className="c-str">"SQL Server"</span>, <span className="c-str">"MVC"</span> {'}'}</div>
+                  <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Education = <span className="c-str">"MCA (Mangalayatan University, 2027)"</span></div>
                   <div className="code-line">&nbsp;&nbsp;&nbsp;&nbsp;{'}'});</div>
                   <div className="code-line">&nbsp;&nbsp;{'}'}</div>
                   <div className="code-line">{'}'}</div>
